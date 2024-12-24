@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #1e2224;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 30rem;
+    padding: 2rem;
+    background-color: #2e2f30;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    transform: perspective(1000px); /* Add depth to the layout */
+}
+
+.screen {
+    width: 100%;
+    height: 5rem;
+    background-color: #8d8d8d;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: right;
+    padding: 1rem;
+    font-size: 2.4rem;
+    color: #fff;
+    pointer-events: none;
+    box-shadow: inset -0.3rem -0.3rem 0.5rem rgba(255, 255, 255, 0.2), 
+                inset 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.btn {
+    flex: 1;
+    height: 5rem;
+    background-color: #4d4d4d;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    box-shadow: -0.3rem -0.3rem 0.5rem rgba(255, 255, 255, 0.2), 
+                0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:active {
+    box-shadow: inset -0.3rem -0.3rem 0.5rem rgba(255, 255, 255, 0.2), 
+                inset 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transform: translateY(2px); /* Adds a pressed-down effect */
+}
+
+.clear {
+    flex: 2; /* Makes the 'C' button larger */
+    background-color: #ff6666;
+    box-shadow: -0.3rem -0.3rem 0.5rem rgba(255, 255, 255, 0.2), 
+                0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+}
+
+.clear:active {
+    box-shadow: inset -0.3rem -0.3rem 0.5rem rgba(255, 255, 255, 0.2), 
+                inset 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transform: translateY(2px); /* Adds a pressed-down effect */
+}
+
+.equal {
+    background-color: #4caf50;
+    box-shadow: -0.3rem -0.3rem 0.5rem rgba(255, 255, 255, 0.2), 
+                0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+}
+
+.equal:active {
+    box-shadow: inset -0.3rem -0.3rem 0.5rem rgba(255, 255, 255, 0.2), 
+                inset 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transform: translateY(2px); /* Adds a pressed-down effect */
+}
